@@ -1,0 +1,2 @@
+El animal que pensaste es perro$1
+¿Vuela?$0
