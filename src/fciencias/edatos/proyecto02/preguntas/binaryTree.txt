@@ -1,2 +1,12 @@
-El animal que pensaste es perro$1
-¿Vuela?$0
+¿Vive en el agua?$1$1$Mon Dec 13 10:57:29 CST 2021
+¿Vuela?$3$1$Mon Dec 13 10:57:29 CST 2021
+¿Es depredador?$6$1$Mon Dec 13 10:57:29 CST 2021
+¿Es un felino?$7$1$Mon Dec 13 10:57:29 CST 2021
+Tu animal es aguila$12$0$Mon Dec 13 10:57:29 CST 2021
+Tu animal es colibri$13$0$Mon Dec 13 10:57:29 CST 2021
+Tu animal es gato$14$0$Mon Dec 13 10:57:29 CST 2021
+Tu animal es perro$15$0$Mon Dec 13 10:57:29 CST 2021
+¿Es grande?$2$1$Mon Dec 13 10:57:29 CST 2021
+¿Es pequeño?$4$1$Mon Dec 13 12:19:12 CST 2021
+Tu animal es ballena$9$0$Mon Dec 13 10:57:29 CST 2021
+Tu animal es Pez$8$0$Mon Dec 13 12:19:12 CST 2021

@@ -43,4 +43,10 @@ public interface TDAQueue<T>{
 	 */
 	public String toString();
 
+	/**
+     * Método que regresa la longitud de la cola
+     * @return La longitud de la lista.
+     * */
+    public int size();
+
 }

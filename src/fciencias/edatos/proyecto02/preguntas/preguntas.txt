@@ -1,0 +1,6 @@
+¿Vive en el agua?  // Fecha:  Mon Dec 13 10:57:29 CST 2021
+¿Vuela?  // Fecha:  Mon Dec 13 10:57:29 CST 2021
+¿Es depredador?  // Fecha:  Mon Dec 13 10:57:29 CST 2021
+¿Es un felino?  // Fecha:  Mon Dec 13 10:57:29 CST 2021
+¿Es grande?  // Fecha:  Mon Dec 13 10:57:29 CST 2021
+¿Es pequeño?  // Fecha:  Mon Dec 13 12:19:12 CST 2021

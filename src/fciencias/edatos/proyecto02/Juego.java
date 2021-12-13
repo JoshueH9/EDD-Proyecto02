@@ -1,6 +1,5 @@
 package fciencias.edatos.proyecto02;    
 
-//import java.util.Random;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -17,81 +16,80 @@ public class Juego extends BinaryTree{
 
 		BinaryTree<String> tree = new BinaryTree<>();
 		String directorio = "src/fciencias/edatos/proyecto02/preguntas/binaryTree.txt";
-		
+		bancoPreguntas(directorio, tree);
+		Scanner sc = new Scanner(System.in);
 
-		
-		tree.insert("agua",1,1);
-		tree.insert("grande",2,1);
-		tree.insert("vuela",3,1);
-		tree.insert("Es ballena",4,0);
-		tree.insert("depredador",6,1);
-		tree.insert("es aguila",12,0);
-		tree.insert("es colibri",13,0);
-		tree.insert("es Perro",7,0);
+        int opc = 0;
 
-		//tree.inorden();
-		
-		//System.out.println("listo 3");
-		tree.retrieveBFS();	
+	    System.out.println("PROYECTO 02 --- Juego de las 20 preguntas.\n\nEl juego de las 20 preguntas o 20Q consiste en que alguien"+
+	        				" piense en un objeto \ny el resto de los jugadores deberá adivinar "+
+	        				"cuál es el objeto haciendo a lo más 20 preguntas \ncuyas respuestas solo pueden ser si o no.\n\nEn este caso"+
+	        				" será la computadora quien haga las preguntas y el usuario solo responderá sı́ o no.");
 
+	    System.out.println("\n──▒▒▒▒▒▒───▄████▄\n─▒─▄▒─▄▒──███▄█▀ \n─▒▒▒▒▒▒▒─▐████──█─█ \n─▒▒▒▒▒▒▒──█████▄ \n─▒─▒─▒─▒───▀████▀ \n");
+	    System.out.println("\nPresiona Enter para comenzar.");
+	    sc.nextLine();
 
+		tree.juego();			
+		tree.escribePreguntas();
 
+		do{
+			try{
+                System.out.println("\nMenú:\n\n"+
+                						"1) Ver preguntas en orden alfabetico"+
+                						"\n2) Ver preguntas en orden de entrada"+
+                						"\n3) Ver animales en orden alfabetico"+
+                						"\n4) Ver animales en orden de entrada"+
+                						"\n5) Salir del programa");
+                opc = sc.nextInt();
+                switch(opc){
 
+                	case 1:
+                		tree.alfabeticoPreguntas(1);
+						try{
+				            Thread.sleep(2500);
+				        }catch(InterruptedException ie){}
+                		break;
 
+                	case 2:
+                		tree.entradaPreguntas(1);
+						try{
+				            Thread.sleep(2500);
+				        }catch(InterruptedException ie){}
+                		break;
 
-		/*
-		tree.insert("grande",2,1);
-		tree.insert("vuela",3,1);
-		tree.insert("Es ballena",4,0);
-		tree.insert("depredador",6,1);
-		tree.insert("es aguila",12,0);
-		tree.insert("es colibri",13,0);
-		tree.insert("es Perro",7,0);
-		*/
+                	case 3:
+                		tree.alfabeticoPreguntas(0);
+						try{
+				            Thread.sleep(2500);
+				        }catch(InterruptedException ie){}
+                		break;
 
-		//tree.juego();
+                	case 4:
+                		tree.entradaPreguntas(0);
+						try{
+				            Thread.sleep(2500);
+				        }catch(InterruptedException ie){}
 
-		//bancoPreguntas(directorio,tree);
+                		break;
 
-		//No pude adivinar al animal en el que pensaste.
-		//Ayudame a aprender, define una pregunta para encontrar a tu animal
-		//*** aqui pido la pregunta ***													IMPORTANTE: este nodo no es hoja
-		// Perfecto, ¿ahora cual es el animal en el que estabas pensando?
-		//*** Pido el animal.
-		//*** Sin mostrar al usuario formulo la pregunta ¿Tu animal es *** ? 			IMPORTANTE: este nodo es hoja
+                	case 5:
+                		break;
 
-		//System.out.println("");
+                	default:
+                		throw new Exception();
 
-		
-		//tree.inorden();
+                }
 
+            }catch(InputMismatchException ime){
+                System.out.println("ERROR: Ingresa un numero.");
+                sc.nextLine();
+            }catch(Exception e){
+                System.out.println("ERROR: Opcion invalida.");
+                sc.nextLine();
+            }
 
-
-
-
-
-
-
-
-
-
-/*
-		TDADoubleList<String> lista = new DoubleLinkedList<>();
-
-		lista.add(0,"Hola");
-		lista.add(1,"Esto");
-		lista.add(2,"es");
-		lista.add(3,"una");
-		lista.add(4,"prueba");
-		lista.add(5,"xd");
-
-		System.out.println(lista.toString());
-		lista.remove(0);
-		lista.remove(0);
-		lista.remove(0);
-
-		System.out.println(lista.toString());
-		*/
+		}while(opc!=5);
 	}
 
 }

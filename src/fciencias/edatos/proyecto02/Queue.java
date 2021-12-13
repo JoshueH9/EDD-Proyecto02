@@ -12,9 +12,12 @@ public class Queue<T> implements TDAQueue<T>{
     // Esta es una lista doble
     private DoubleLinkedList<T> lista = new DoubleLinkedList<T>();
 
+    private int size;
+
     @Override
     public void clear(){
         lista.clear();
+        size = 0;
     }
 
     @Override
@@ -22,6 +25,7 @@ public class Queue<T> implements TDAQueue<T>{
         if(lista.isEmpty()){
             return null;
         }else{
+            size--;
             return lista.remove(0);
         }
     }
@@ -29,7 +33,7 @@ public class Queue<T> implements TDAQueue<T>{
     @Override
     public void enqueue(T e){
         lista.add(lista.size()-1, e);
-        //size++;        
+        size++;        
     }
 
     @Override
@@ -47,11 +51,8 @@ public class Queue<T> implements TDAQueue<T>{
         return lista.toString();    
     }
 
-    /**
-     * Método que regresa la longitud de la cola
-     * @return La longitud de la lista.
-     * */
-    /*public int size(){
+    @Override
+    public int size(){
         return size;
-    }*/
+    }
 }
